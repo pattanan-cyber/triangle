@@ -20,12 +20,12 @@ class TriangleTest(unittest.TestCase):
     def test_invalid_argument_raises_exception(self):
         """any non-positive argument should raise ValueError"""
         with self.assertRaises(ValueError):
-            b1 = is_triangle(-1, 2, 2)
             b2 = is_triangle( 1, 0, 2)
+            b1 = is_triangle(-1, 2, 2)
 
         with self.assertRaises(ValueError):
+            b2 = is_triangle( 1, 0, 2)
             b1 = is_triangle( 1, -1, 2)
-            b2 = is_triangle( 1,  0, 2)
 
         with self.assertRaises(ValueError):
             b1 = is_triangle( 1, 2, -1)
@@ -34,3 +34,7 @@ class TriangleTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             b1 = is_triangle( -1, -1, -1)
             b2 = is_triangle( 0, 0, 0)
+
+    def test_c_greater_than_other(self):
+        self.assertFalse(is_triangle(10, 10, 21))
+        self.assertFalse(is_triangle(10, 11, 24))

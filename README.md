@@ -21,7 +21,7 @@ Use code coverage to find untested code and a problem with the tests.
 
 4. Is there any part of the code under test (`trinagle.py`) that was not tested?
 
-   Write the Line Numbers here: [          ]
+   Write the Line Numbers here: [     22     ]
 
 5. Modify the tests so that all lines of the code are tested.
 
@@ -36,7 +36,7 @@ Use code coverage to find untested code and a problem with the tests.
 
 8. Normally, **all** the lines of test code should be executed.  When some part of test code is not executed it may indicate a problem with the tests.  Explain the problem in the unit test code. (write you answer below).
 
-   Answer:
+   Answer: When use assert and it not same as the condition it will not run the rest of code.
 
 
 
